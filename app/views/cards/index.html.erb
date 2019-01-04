@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Focus</th>
+      <th>Desire</th>
+      <th>Outside influences</th>
+      <th>Inner dialog</th>
+      <th>Challenges</th>
+      <th>Insight</th>
+      <th>Meditation</th>
+      <th>Resolution</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.name %></td>
+        <td><%= card.focus %></td>
+        <td><%= card.desire %></td>
+        <td><%= card.outside_influences %></td>
+        <td><%= card.inner_dialog %></td>
+        <td><%= card.challenges %></td>
+        <td><%= card.insight %></td>
+        <td><%= card.meditation %></td>
+        <td><%= card.resolution %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div>
+<h3>Import a CSV File</h3>
+  <%= form_tag import_cards_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
+<br>
+
+<%= link_to 'New Card', new_card_path %>

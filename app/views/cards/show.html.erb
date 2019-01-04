@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @card.name %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @card.focus %>
+</p>
+
+<p>
+  <strong>Desire:</strong>
+  <%= @card.desire %>
+</p>
+
+<p>
+  <strong>Outside influences:</strong>
+  <%= @card.outside_influences %>
+</p>
+
+<p>
+  <strong>Inner dialog:</strong>
+  <%= @card.inner_dialog %>
+</p>
+
+<p>
+  <strong>Challenges:</strong>
+  <%= @card.challenges %>
+</p>
+
+<p>
+  <strong>Insight:</strong>
+  <%= @card.insight %>
+</p>
+
+<p>
+  <strong>Meditation:</strong>
+  <%= @card.meditation %>
+</p>
+
+<p>
+  <strong>Resolution:</strong>
+  <%= @card.resolution %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

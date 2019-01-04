@@ -1,0 +1,62 @@
+<%= form_with(model: card, local: true) do |form| %>
+  <% if card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :focus %>
+    <%= form.text_area :focus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desire %>
+    <%= form.text_area :desire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outside_influences %>
+    <%= form.text_area :outside_influences %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inner_dialog %>
+    <%= form.text_area :inner_dialog %>
+  </div>
+
+  <div class="field">
+    <%= form.label :challenges %>
+    <%= form.text_area :challenges %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insight %>
+    <%= form.text_area :insight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :meditation %>
+    <%= form.text_area :meditation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resolution %>
+    <%= form.text_area :resolution %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

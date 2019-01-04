@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  focus: MyText
+  desire: MyText
+  outside_influences: MyText
+  inner_dialog: MyText
+  challenges: MyText
+  insight: MyText
+  meditation: MyText
+  resolution: MyText
+
+two:
+  name: MyString
+  focus: MyText
+  desire: MyText
+  outside_influences: MyText
+  inner_dialog: MyText
+  challenges: MyText
+  insight: MyText
+  meditation: MyText
+  resolution: MyText
