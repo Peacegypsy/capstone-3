@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :cards do
-    collection { post :import }
-  end
   root to: "cards#index"
   get "cards/index"
 

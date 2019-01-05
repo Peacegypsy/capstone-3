@@ -7,11 +7,6 @@ class CardsController < ApplicationController
     @cards = Card.all
   end
 
-  def import
-    Card.import(params[:file])
-    redirect_to root_url, notice: "Cards imported."
-  end
-
   # GET /cards/1
   # GET /cards/1.json
   def show
