@@ -43,8 +43,10 @@ class CardsController < ApplicationController
     cards_drawn = 0
     until cards_drawn == 8
       card = cards.sample
+      if !@spread.include? card
       @spread << card
       cards_drawn += 1
+      end
     end
     @spread
   end
