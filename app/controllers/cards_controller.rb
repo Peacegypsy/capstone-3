@@ -48,7 +48,7 @@ class CardsController < ApplicationController
       cards_drawn += 1
       end
     end
-    @spread
+    render json: @spread.as_json, status: :ok
   end
 
   # PATCH/PUT /cards/1
