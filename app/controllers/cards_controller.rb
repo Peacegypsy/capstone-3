@@ -37,6 +37,18 @@ class CardsController < ApplicationController
     end
   end
 
+  def layout
+    cards = Card.all
+    @spread = []
+    cards_drawn = 0
+    until cards_drawn == 8
+      card = cards.sample
+      @spread << card
+      cards_drawn += 1
+    end
+    @spread
+  end
+
   # PATCH/PUT /cards/1
   # PATCH/PUT /cards/1.json
   def update
@@ -73,3 +85,20 @@ class CardsController < ApplicationController
     params.require(:card).permit(:name, :focus, :desire, :outside_influences, :inner_dialog, :challenges, :insight, :meditation, :resolution)
   end
 end
+
+# cards = {
+#   Abundance: 1,
+#   Appearance: 1,
+#   Balance: 1,
+#   Beginnings: 1,
+#   Betrayal: 1,
+#   Caution: 1,
+#   Celebration: 1,
+#   Choice: 1,
+#   Completion: 1,
+#   Conflict: 1,
+#   Consequences: 1,
+#   Destiny: 1,
+#   Direction: 1,
+#   Discovery: 1,
+# }
